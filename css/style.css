@@ -56,11 +56,13 @@ body {
 a {
     text-decoration: none;
 }
-  
+
 img {
     max-width: 100%;
     height: auto;
 }
+
+/* index */
 
 .navigation {
     background-color: var(--beige);
