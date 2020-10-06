@@ -522,6 +522,7 @@ img {
     background-position: center;
     background-repeat: no-repeat;
     bottom: 104px;
+    cursor: pointer;
 }
 
 .offers-prev-slide {
@@ -759,6 +760,7 @@ img {
 }
 
 .catalog-item img {
+    order: -1;
     z-index: 0;
 }
 
@@ -901,6 +903,7 @@ img {
 .services-button:active,
 .services-button-current,
 .services-button-current:hover {
+    box-shadow: unset;
     color: var(--basic-fitst-color);
     background-color: var(--basic-white);
 }
@@ -1016,13 +1019,13 @@ img {
     line-height: 24px;
     margin: 0;
     padding: 0;
-    padding-left: 35px;
     margin-bottom: 20px;
 }
 
 .site-list li {
     position: relative;
     margin-top: 10px;
+    padding-left: 35px;
 }
 
 .site-list li:first-child {
@@ -1034,7 +1037,7 @@ img {
     content: "";
     width: 25px;
     height: 2px;
-    left: -35px;
+    left: 0;
     top: 10px;
     background-color: var(--basic-third-color);   
 }
