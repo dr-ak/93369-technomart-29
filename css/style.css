@@ -181,6 +181,13 @@ img {
     color: var(--basic-white);
 }
 
+.search input[type='search']::-webkit-search-decoration, 
+.search input[type='search']::-webkit-search-cancel-button, 
+.search input[type='search']::-webkit-search-results-button, 
+.search input[type='search']::-webkit-search-results-decoration {
+  display: none;
+}
+
 .search input[type="submit"] {
     order: -1;
     flex-grow: 0;
@@ -210,7 +217,7 @@ img {
     z-index: 0;
 }
 
-.search input[type="text"]:not(:placeholder-shown),
+.search input[type="search"]:not(:placeholder-shown),
 .search input:not(:placeholder-shown) + input {
     background-color: var(--basic-white);
     z-index: 2;
@@ -502,15 +509,85 @@ img {
 .offers-slider {
     grid-column: 1/3;
     grid-row: 2/4;
+    position: relative;
+}
+
+.offers-slide-arrow{
+    position: absolute;
+    width: 32px;
+    height: 50px;
+    padding: 5px;
+    border: unset;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    bottom: 104px;
+}
+
+.offers-prev-slide {
+    left: 20px;
+    background-image: url("../img/icon-left.svg");
+}
+
+.offers-next-slide {
+    right: 15px;
+    background-image: url("../img/icon-right.svg");
+}
+
+.slider-controls {
+    position: absolute;
+    width: 30px;
+    display: flex;
+    justify-content: space-between;
+    bottom: 36px;
+    left: calc(50% - 15px);
+}
+
+.slider-controls button {
+    padding: 0;
+    width: 10px;
+    height: 10px;
+    background-color: var(--basic-white);
+    border: 2px solid var(--basic-white);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.offers-slider button:focus {
+    outline: none;
+}
+  
+.slider-controls .current {
+   background-color: var(--basic-third-color);
+}
+
+.offers-slide {
+    display: none;
+}
+
+.offers-slide-current {
+    display: block;
+}
+
+.offers-slide {
     height: 270px;
     color: var(--basic-white);
     background-color: var(--basic-black);
-    background-image: url("../img/perforators.png");
+    padding-top: 25px;
     background-size: cover;
 }
 
+.offers-slide-perforators {
+    background-image: url("../img/perforators.jpg");
+}
+
+.offers-slide-drills {
+    background-image: url("../img/drills.jpg");
+}
+
+
 .offers-slider-item {
-    margin: 25px 0 5px 25px;
+    margin: 0 0 5px 25px;
     font-weight: bold;
     font-size: 36px;
     line-height: 36px;
@@ -728,6 +805,7 @@ img {
 .catalog-item-price::before {
     content: "";
     position: absolute;
+    z-index: -1;
     width: 28px;
     height: 28px;
     background-color: var(--basic-third-color);
@@ -762,7 +840,7 @@ img {
 }
 
 .services {
-    padding: 65px 0 55px 0;
+    padding: 65px 0 50px 0;
     margin-bottom: 70px;
     background-color: var(--dark-beige);
 }
@@ -775,7 +853,7 @@ img {
 .services-title ~ p {
     width: 395px;
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 
 .services p {
@@ -802,7 +880,7 @@ img {
 
 .services-button {
     width: 240px;
-    height: 60px;
+    height: 62px;
     padding: 0;
     font-family: "Cuprum", Arial, sans-serif;
     font-weight: bold;
@@ -818,10 +896,11 @@ img {
 
 .services-button:hover {
     background-color: var(--basic-second-color);
-    box-shadow: unset;
 }
 
-.services-button:active {
+.services-button:active,
+.services-button-current,
+.services-button-current:hover {
     color: var(--basic-fitst-color);
     background-color: var(--basic-white);
 }
@@ -831,11 +910,54 @@ img {
 }
 
 .services-item {
+    display: none;
+    position: relative;
+    z-index: 1;
     width: 100%;
     height: 100%;
-    background-image: url("../img/truck.png");
-    background-position: right;
+}
+
+.services-item-current {
+    display: block;
+}
+
+.services-item::before {
+    position: absolute;
+    z-index: 0;
+    content: "";
+    width: 390px;
+    height: 285px;
     background-repeat: no-repeat;
+}
+
+.services-item-delivery::before {
+    width: 468px;
+    height: 261px;
+    right: 0;
+    bottom: -52px;
+    background-image: url("../img/truck.png");
+}
+
+.servises-item-warranty::before {
+    width: 389px;
+    height: 283px;
+    right: -7px;
+    bottom: -52px;
+    background-image: url("../img/warranty.png");
+}
+
+.services-item-credit::before {
+    width: 465px;
+    height: 285px;
+    right: -10px;
+    bottom: -52px;
+    background-image: url("../img/credit.png");
+}
+
+.services-item-btn {
+    width: 195px;
+    margin-top: 25px;
+    border-radius: 2px;
 }
 
 .services-list {
@@ -844,12 +966,12 @@ img {
 
 .services-item h2 {
     margin: 0;
-    margin: 40px 0 30px 0;
+    padding: 50px 0 25px 0;
 }
 
 .services-item p {
     margin: 0;
-    width: 280px;
+    width: 315px;
 }
 
 .company .container {
@@ -1020,7 +1142,6 @@ img {
     position: relative;
     display: flex;
     padding: 35px 0;
-    justify-content: center;
 }
 
 .copyright-company {
@@ -1031,7 +1152,7 @@ img {
 .footer-mail {
     margin: 0;
     width: 140px;
-    margin-left: auto;
+    margin-left: 120px;
 }
 
 .copyright-dev {
@@ -1059,9 +1180,8 @@ img {
 }
 
 .social-buttons {
-    position: absolute;
     width: 132px;
-    margin: auto;
+    margin-left: auto;
     display: flex;
     justify-content: space-between;
 }
@@ -1167,7 +1287,7 @@ img {
 .account-nav {
     list-style: none;
     padding: 0;
-    margin: 7px auto 0 auto;
+    margin: 7px auto 0;
     display: flex;
 }
 
@@ -1188,22 +1308,13 @@ img {
 
 }
 
-.account-nav:hover a {
+.account-nav a:hover {
     color: var(--basic-third-color);
 }
 
-.account-nav:hover .user-orders::before {
-    background-color: var(--basic-third-color);
-}
-
-.account-nav:active a {
+.account-nav a:active {
     opacity: 0.3;
     color: var(--basic-fitst-color);
-}
-
-.account-nav:active .user-orders::before {
-    opacity: 0.3;
-    background-color: var(--basic-fitst-color);
 }
 
 .account-nav a {
