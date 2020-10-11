@@ -16,8 +16,11 @@
           <img src="img/logo-technomart.svg" alt="Логотип магазина «Техномарт»" width="108" height="18">
         </a>
         <form class="search">
-          <input type="search" name="goods" autocomplete="on" placeholder="Поиск:">
-          <input type="submit" value="">
+          <label class="visually-hidden" for="search-field">Поле поиска</label>
+          <input type="search" id="search-field" name="goods" autocomplete="on" placeholder="Поиск:">
+          <button type="submit">
+            <span class="visually-hidden">Кнопка поиска</span>
+          </button>   
         </form>
         <a class="bookmarks" href="">Закладки:&nbsp;<span>0</span></a>
         <a class="cart" href="">Корзина:&nbsp;<span>0</span></a>
@@ -26,9 +29,9 @@
     </div>
     <div class="container">
       <div class="main-header-info">
-        <h1 class="main-header-description">Интернет магазин строительных материалов и инструментов для ремота</h1>
+        <h1 class="main-header-description">Интернет магазин строительных материалов<br>и инструментов для ремонта</h1>
         <div class="main-header-contacts">
-          <a class="main-header-phone" href="tel:+78125550555">+7(812)555-05-55</a>
+          <a class="main-header-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
           <p class="main-header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <div class="account">
@@ -66,7 +69,7 @@
           </li>
           <li class="offers-item offers-item-discount">
             <p>Скидка 50%</p>
-            <a class="btn" href="">На любой вкус</a>
+            <a class="btn" href="">На 350 товаров</a>
           </li>
           <li class="offers-item offers-item-delivery">
             <p>Доставка</p>
@@ -76,15 +79,14 @@
             <div class="offers-slide offers-slide-perforators offers-slide-current">            
               <p class="offers-slider-item">Перфораторы</p>
               <span class="offers-slider-text">Настоящие мужские игрушки</span>
-              <a class="btn offers-slider-link" href="">Открыть каталог</a>
             </div>
             <div class="offers-slide offers-slide-drills">            
               <p class="offers-slider-item">Дрели</p>
               <span class="offers-slider-text">Соседям на радость!</span>
-              <a class="btn offers-slider-link" href="">Открыть каталог</a>
             </div>
             <button class="offers-slide-arrow offers-prev-slide" type="button" aria-label="Предыдущий слайд"></button>
             <button class="offers-slide-arrow offers-next-slide" type="button" aria-label="Следующий слайд"></button>
+            <a class="btn offers-slider-link" href="">Открыть каталог</a>
             <div class="slider-controls">
               <button class="current" type="button" aria-label="Первый слайд"></button>
               <button type="button" aria-label="Второй слайд"></button>
@@ -99,7 +101,7 @@
         </div>
         <ul class="catalog-list">
           <li class="catalog-item">
-            <h3 class="catalog-item-name"><a href="">Перфоратор BOSH BFG 9000</a></h3>
+            <h3 class="catalog-item-name"><a href="">Перфоратор BOSCH BFG 9000</a></h3>
             <div class="catalog-item-actions">
               <a class="btn catalog-item-checkout-btn" href="">Купить</a>
               <button class="btn catalog-item-to-bookmakrs-btn">В закладки</button>
@@ -109,7 +111,7 @@
             <p class="catalog-item-price">25500 р.</p>
           </li>
           <li class="catalog-item item-new">
-            <h3 class="catalog-item-name"><a href="">Перфоратор BOSH BFG 3000</a></h3>
+            <h3 class="catalog-item-name"><a href="">Перфоратор BOSCH BFG 3000</a></h3>
             <div class="catalog-item-actions">
               <a class="btn catalog-item-checkout-btn" href="">Купить</a>
               <button class="btn catalog-item-to-bookmakrs-btn">В закладки</button>
@@ -119,7 +121,7 @@
             <p class="catalog-item-price">15500 р.</p>
           </li>
           <li class="catalog-item">
-            <h3 class="catalog-item-name"><a href="">Перфоратор BOSH BFG 6000</a></h3>
+            <h3 class="catalog-item-name"><a href="">Перфоратор BOSCH BFG 6000</a></h3>
             <div class="catalog-item-actions">
               <a class="btn catalog-item-checkout-btn" href="">Купить</a>
               <button class="btn catalog-item-to-bookmakrs-btn">В закладки</button>
@@ -129,7 +131,7 @@
             <p class="catalog-item-price">25500 р.</p>
           </li>
           <li class="catalog-item item-new">
-            <h3 class="catalog-item-name"><a href="">Перфоратор BOSH BFG 2000</a></h3>
+            <h3 class="catalog-item-name"><a href="">Перфоратор BOSCH BFG 2000</a></h3>
             <div class="catalog-item-actions">
               <a class="btn catalog-item-checkout-btn" href="">Купить</a>
               <button class="btn catalog-item-to-bookmakrs-btn">В закладки</button>
@@ -147,7 +149,7 @@
         </div>
         <ul class="popular-brands-list">
           <li class="popular-brands-item">
-            <a href=""><img src="img/bosh.png" width="220" height="145" alt="logo Bosh"></a>
+            <a href=""><img src="img/bosch.png" width="220" height="145" alt="logo bosch"></a>
           </li>
           <li class="popular-brands-item">
             <a href=""><img src="img/makita.png" width="220" height="145" alt="logo Makita"></a>
@@ -259,7 +261,7 @@
         </a>
         <div class="footer-contacts">
           <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-          <a href="tel:+78125550555">+7(812)555-05-55</a>
+          <a href="tel:+78125550555">&nbsp;+7 (812) 555-05-55</a>
         </div>
       </div>
       <div class="footer-nav">
@@ -281,7 +283,7 @@
     <div class="main-footer-bottom">
       <div class="container">
         <p class="copyright-company">
-          &copy; 2010-2019 Компания &laquo;Техномарт&raquo; Все права защищены
+          &copy; 2010&ndash;2019 Компания &laquo;Техномарт&raquo; Все права защищены
         </p>
         <div class="social-buttons">
           <a class="social-button social-button-vk" href="">
@@ -336,7 +338,7 @@
     <button class="modal-close" type="button" aria-label="Закрыть"></button>
   </section>
 
-  <section class="modal modal-cart">
+  <div class="modal modal-cart">
     <h2 class="visually-hidden">Добавить в корзину</h2>
     <p>Товар добавлен в корзину!</p>
     <div class="modal-footer">
@@ -344,6 +346,6 @@
       <button class="btn modal-cart-continue-btn" type="submit">Продолжить покупки</button>
     </div>
     <button class="modal-close" type="button" aria-label="Закрыть"></button>
-  </section>
+  </div>
   </body>
 </html>
