@@ -199,10 +199,10 @@ img {
     color: var(--basic-white);
 }
 
-.search input[type='search']::-webkit-search-decoration, 
-.search input[type='search']::-webkit-search-cancel-button, 
-.search input[type='search']::-webkit-search-results-button, 
-.search input[type='search']::-webkit-search-results-decoration {
+.search input[type="search"]::-webkit-search-decoration, 
+.search input[type="search"]::-webkit-search-cancel-button, 
+.search input[type="search"]::-webkit-search-results-button, 
+.search input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
@@ -593,7 +593,7 @@ img {
 .offers-slide {
     height: 266px;
     color: var(--basic-white);
-    background-color: var(--basic-black);
+    background-color: var(--gray);
     padding-top: 22px;
     background-size: cover;
 }
@@ -630,14 +630,6 @@ img {
     color: var(--basic-white);
     text-transform: uppercase;
     background-color: var(--basic-third-color);
-}
-
-.offers-slider-link:hover {
-    background-color: var(--light-red);
-}
-
-.offers-slider-link:active {
-    background-color: var(--red);
 }
 
 .popular-items-header {
@@ -678,6 +670,14 @@ img {
     background-color: var(--basic-third-color);
     padding: 0;
     cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--light-red);
+}
+
+.btn:active {
+    background-color: var(--red);
 }
 
 .catalog-list {
@@ -725,7 +725,7 @@ img {
 }
 
 .catalog-item-actions {
-    z-index: 0;
+    z-index: -1;
     position: absolute;
     width: 100%;
     height: 145px;
@@ -772,10 +772,12 @@ img {
 }
 
 .catalog-item-to-bookmakrs-btn:active {
+    background-color: var(--basic-white);
     color: var(--basic-fitst-color);
 }
 
 .catalog-item-to-bookmakrs-btn:hover {
+    background-color: var(--basic-white);
     border-color: var(--basic-fitst-color);
 }
 
@@ -1358,7 +1360,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    font-family: PT Sans;
+    font-family: "PT Sans", Arial, sans-serif;
     font-size: 13px;
     line-height: 18px;
     text-transform: uppercase;
@@ -1789,6 +1791,10 @@ a.pagination-item-next {
 .pagination-item-current {
     background-color: var(--basic-third-color);
     border: 0;
+}
+
+.pagination-item-current a {
+    color: var(--basic-white);
 }
 
 .about-item {
