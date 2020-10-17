@@ -32,6 +32,7 @@
     --light: #E5E5E5;
     --extra-light: #EAEAEA;
 
+    --extra-dark-green: #367315;
     --dark-green: #518534;
     --bright-green:#00CA74;
     --green: #5FBB2D;
@@ -56,9 +57,9 @@
 
     --blue-opacity50: rgba(50, 66, 92, 0.5);
 
-    --light-gray-opacity30: rgb(197, 197, 197, 0.3);
+    --light-gray-opacity30: rgba(197, 197, 197, 0.3);
 
-    --gray-opacity30: rgb(169, 169, 169, 0.3);
+    --gray-opacity30: rgba(169, 169, 169, 0.3);
 
     --black-opacity24:  rgba(0, 0, 0, 0.24);
 }
@@ -750,7 +751,7 @@ img {
     background-image: url("../img/cart.svg");
     background-position: 30px;
     background-repeat: no-repeat;
-    box-shadow: inset 0px -3px 0px #367315;
+    box-shadow: inset 0px -3px 0px var(--extra-dark-green);
     border-radius: 2px;
 }
 
@@ -1204,11 +1205,6 @@ img {
 
 .main-footer-bottom-link:active {
     text-decoration: none;
-    color: var(--special-)
-}
-
-.main-footer-bottom-link:active {
-    text-decoration: none;
     color: var(--basic-third-color);
 }
 
@@ -1288,6 +1284,7 @@ img {
 .account-link-logout {
     position: relative;
     display: inline-block;
+    vertical-align: top;
     width: 40px;
     height: 45px;
     background-color: var(--basic-white);
